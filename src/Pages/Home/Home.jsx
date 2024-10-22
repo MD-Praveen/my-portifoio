@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Home.module.css';
 
-import SocialLinks from '../../Components/Socail-Links/SocialLinks';
+// import SocialLinks from '../../Components/Socail-Links/SocialLinks';
 
 import programmerImg from '../../Assets/Images/programmer.svg';
 import jsImg from '../../Assets/Images/js.webp';
