@@ -1,0 +1,269 @@
+.homeContainer {
+    background-image: url('../../Assets/Images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 89.5vh;
+    position: relative;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.nameBox {
+    width: fit-content;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(105, 105, 105, 0.485);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+.hi {
+    font-size: 32px;
+}
+
+.name span {
+    font-size: 14px;
+    color: rgba(72, 71, 71, 0.619);
+}
+
+.name h2 {
+    margin: 5px 10px;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+}
+
+.flooatingName {
+    width: fit-content;
+    padding: 15px 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px rgba(105, 105, 105, 0.485);
+    border-radius: 10px;
+    position: relative;
+    top: 80px;
+    left: 180px;
+    font-family: "PT Serif", serif;
+    text-transform: capitalize;
+    color: #043bdf;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.typingCursor {
+    display: inline-block;
+    width: 4px;
+    height: 25px;
+    background-color: #043bdf;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    position: relative;
+    top: 5px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.programmer {
+    /* transform: translate(-50%,-50%); */
+    position: relative;
+    left: 140px;
+    background-image: url('../../Assets/Images/bgcircle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+}
+
+.programmer img {
+    width: 30%;
+    height: auto;
+    position: relative;
+    top: 40px;
+}
+
+.iconsContainer {
+    position: absolute;
+    top: 50px; 
+    right: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons span {
+    width: 120px;
+    height: 120px;
+    margin: 35px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(105, 105, 105, 0.485);
+
+    animation: slideIn 1s ease-out forwards, bounce 5s ease-in-out 2s infinite;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+    25% {
+        transform: translate(-2px,-5px); /* Move up */
+    }
+    50% {
+        transform: translate(5px,0); /* Return to original position */
+    }
+    75% {
+        transform: translate(-2px,-5px); /* Small up movement */
+    }
+    100% {
+        transform: translate(0, 5px); /* Final return */
+    }
+}
+
+.iconImage {
+    width: 80px;
+    height: auto;
+}
+
+.js{
+    position: relative;
+    right: 120px;
+}
+
+.icons .react{
+    width: 150px;
+    height: 150px;
+}
+
+.node{
+    position: relative;
+    right: 80px;
+}
+
+
+@media (max-width: 800px){
+    .homeContainer{
+        height: 90vh;
+    }
+    .iconsContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        right: 55px;
+        bottom: 10px;
+        align-items: flex-end;
+    }
+
+    .icons{
+        flex-direction: row;
+    }
+
+    .js, .node, .react{
+        right: 0;
+    }
+
+    .programmer {
+        background-size: 80%;
+        top: 80;
+        left: 100px;
+    }
+
+    .programmer img {
+        width: 75%;
+        position: relative;
+        top: 40px;
+    }
+
+    .js, .node{
+        top: -50px;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .socialIcons{
+        display: none;
+    }
+
+    .nameBox{
+        position: relative;
+        top: 50px;
+        left: 25px;
+
+        .name h2{
+            margin: 8px 0 ;
+        }
+    }
+
+    .flooatingName{
+        position: relative;
+        top: 80px;
+        left: 60px;
+    }
+
+    .programmer{
+        top: 100px;
+        left: 50px;
+    }
+
+    .iconsContainer{
+        position: absolute;
+        left: 0;
+        right: 40px;
+        top: 0;
+        bottom: 20px;
+    }
+
+    .icons span {
+        width: 80px;
+        height: 80px;
+        margin: 15px;
+    }
+
+    .iconImage {
+        width: 60px;
+    }
+
+    .icons .react{
+        width: 100px;
+        height: 100px;
+    }
+}
